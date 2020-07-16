@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import AboutUs from './pages/AboutUs';
+import ToS from './pages/ToS';
+import Marketplace from './pages/Marketplace';
+import Error from './pages/Error';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { Route, Switch } from 'react-router-dom';
+
+const App = () => {
+	return (
+		<div>
+			<Navbar />
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route exact path='/kontakt/' component={Contact} />
+				<Route exact path='/o-nas/' component={AboutUs} />
+				<Route exact path='/regulamin/' component={ToS} />
+				<Route exact path='/sprzedaj/' component={Marketplace} />
+				<Route component={Error} />
+			</Switch>
+			<Footer />
+		</div>
+	);
+};
 
 export default App;

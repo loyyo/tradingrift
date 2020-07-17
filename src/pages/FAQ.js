@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 
-const AboutUs = () => {
+const FAQ = () => {
 	return (
 		<div>
 			<Hero>
@@ -12,4 +12,4 @@ const AboutUs = () => {
 	);
 };
 
-export default AboutUs;
+export default FAQ;

@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Hero from '../components/Hero';
+import Herov2 from '../components/Herov2';
 import Banner from '../components/Banner';
 import Process from '../components/Process';
-import Newsletter from '../components/Newsletter';
 import Testimonials from '../components/Testimonials';
 import SellCTA from '../components/SellCTA';
-import ComingSoon from '../components/ComingSoon';
+import Newsletter from '../components/Newsletter';
 
 const Home = () => {
 	return (
 		<>
-			<Hero>
+			<Herov2>
 				<Banner title='Lorem ipsum' subtitle='lorem ipsum'>
 					<Link to='/faq' className='btn-primary'>
 						Dowiedz się więcej
@@ -21,12 +20,11 @@ const Home = () => {
 						Sprzedaj teraz
 					</Link>
 				</Banner>
-			</Hero>
+			</Herov2>
 			<Process />
 			<Testimonials />
-			{/* <Counter /> */}
-			<ComingSoon />
 			<Newsletter />
+			{/* <Counter /> */}
 			<SellCTA />
 		</>
 	);

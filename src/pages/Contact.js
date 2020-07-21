@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Hero from '../components/Hero';
+import Hero from '../components/Herov2';
 import Banner from '../components/Banner';
 import ContactForm from '../components/ContactForm';
 import ContactInfo from '../components/ContactInfo';

@@ -1,7 +1,8 @@
 import React from 'react';
-import Herov2 from '../components/Herov2';
-import Banner from '../components/Banner';
-import { Link } from 'react-router-dom';
+// import Herov2 from '../components/Herov2';
+// import Banner from '../components/Banner';
+// import { Link } from 'react-router-dom';
+
 /* cSpell:disable */
 const ToS = () => {
 	return (
@@ -16,7 +17,7 @@ const ToS = () => {
 					</Link>
 				</Banner>
 			</Herov2> */}
-			<div class='room-info'>
+			<div class='tos'>
 				<section id='sp-custom-position-3'>
 					<div class='container'>
 						<div class='row'>

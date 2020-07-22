@@ -23,7 +23,6 @@ const Home = () => {
 			</Herov2>
 			<Process />
 			<Testimonials />
-			<Newsletter />
 			{/* <Counter /> */}
 			<SellCTA />
 		</>

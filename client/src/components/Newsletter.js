@@ -6,30 +6,15 @@ const Newsletter = () => {
 	const handleChange = (e) => {
 		setEmail(e.target.value.trim());
 	};
-	const submitEmail = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
-		const data = {
-			members: [
-				{
-					email_address: email,
-					status: 'subscribed',
-				},
-			],
-		};
-		const postData = JSON.stringify(data);
-		const options = {
-			method: 'POST',
-			headers: {
-				Authorization: 'auth e848ec700d15040b37439b457e52619c-us17',
-			},
-			body: postData,
-		};
 		if (email) {
-			fetch(
-				'https://us17.api.mailchimp.com/3.0/lists/1e315f371f/members',
-				options
-			).then((response) => response.json());
+			fetch(`/api/memberAdd?email=${email}`)
+				.then((res) => res.json())
+				.then((res) => console.log(res))
+				.catch((err) => console.log(err));
 		}
+		window.location.reload();
 	};
 	return (
 		<div className='newsletter'>
@@ -37,7 +22,7 @@ const Newsletter = () => {
 				<div className='newsletter-header'>
 					<p>NEWSLETTER:</p>
 				</div>
-				<form onSubmit={submitEmail}>
+				<form action='/' onSubmit={handleSubmit}>
 					<div className='newsletter-form'>
 						<input
 							type='email'

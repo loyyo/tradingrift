@@ -6,7 +6,6 @@ import Banner from '../components/Banner';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import SellCTA from '../components/SellCTA';
-import Newsletter from '../components/Newsletter';
 
 const Home = () => {
 	return (

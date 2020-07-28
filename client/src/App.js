@@ -11,7 +11,8 @@ import FAQ from './pages/FAQ';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import GoToTop from './components/GoToTop';
+import ScrollToTop from './components/ScrollToTop';
+import Messenger from './components/Messenger';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
@@ -27,8 +28,9 @@ const App = () => {
 				<Route exact path='/faq/' component={FAQ} />
 				<Route component={Error} />
 			</Switch>
-			<GoToTop />
 			<Footer />
+			<ScrollToTop />
+			<Messenger />
 		</div>
 	);
 };

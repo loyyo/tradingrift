@@ -6,6 +6,7 @@ import Banner from '../components/Banner';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import SellCTA from '../components/SellCTA';
+import ContentIntroduction from '../components/ContentIntroduction';
 
 const Home = () => {
 	return (
@@ -20,6 +21,10 @@ const Home = () => {
 					</Link>
 				</Banner>
 			</Herov2>
+			<ContentIntroduction
+				first='Jak sprzedać konto do gry?'
+				second='To proste! Zrobisz to w czterech krokach. Szybko, łatwo, a przede wszystkim uczciwie!'
+			/>
 			<Process />
 			<Testimonials />
 			{/* <Counter /> */}

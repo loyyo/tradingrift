@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Hero from '../components/Herov2';
 import Banner from '../components/Banner';
 import ContactForm from '../components/ContactForm';
-import ContactInfo from '../components/ContactInfo';
 
 const Contact = () => {
 	return (
@@ -16,7 +15,6 @@ const Contact = () => {
 				</Banner>
 			</Hero>
 			<ContactForm />
-			<ContactInfo />
 		</>
 	);
 };

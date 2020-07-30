@@ -1,17 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { FaPhoneAlt, FaSkype } from 'react-icons/fa';
 import { BsEnvelopeFill } from 'react-icons/bs';
-
+import ContentIntroduction from './ContentIntroduction';
+import axios from 'axios';
 // import '../styles/ContactForm.css';
 
 const ContactForm = () => {
+	const [topic, setTopic] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+	const [content, setContent] = useState('');
+	const [media, setMedia] = useState('');
+
+	const handleChangeTopic = (e) => {
+		setTopic(e.target.value);
+	};
+
+	const handleChangeEmail = (e) => {
+		setEmail(e.target.value.trim());
+	};
+
+	const handleChangePhone = (e) => {
+		setPhone(e.target.value.trim());
+	};
+
+	const handleChangeContent = (e) => {
+		setContent(e.target.value);
+	};
+
+	const handleChangeMedia = (e) => {
+		setMedia(e.target.value);
+	};
+
+	const handleSubmitForm = (e) => {
+		e.preventDefault();
+		if (email) {
+			const text = `Telefon: ${phone} Media: ${media} Treść: ${content}`;
+			const data = {
+				subject: topic,
+				email,
+				text,
+			};
+			axios
+				.post('/submitform', data)
+				.then((response) => console.log(response.data))
+				.catch((error) => console.log(error));
+		}
+	};
+
 	const reCaptcha = (value) => {
 		console.log('Captcha value:', value);
 	};
+
 	return (
 		<div>
-			<form method='post' className='contact-all'>
+			<ContentIntroduction
+				first='Skontaktuj się z Nami! Odpowiadamy na wszystkie Pytania.'
+				second='Nasz support mailowy jest czynny przez 6 dni w tygodniu.'
+			/>
+			<form action='/' onSubmit={handleSubmitForm} className='contact-all'>
 				<div className='contact-form'>
 					<div style={{ marginBottom: '30px', marginLeft: '10px' }}>
 						<p>
@@ -23,7 +71,13 @@ const ContactForm = () => {
 							<p>Temat wiadomości</p>
 						</div>
 						<div className='contact-form-input'>
-							<input type='text' name='contact-form-topic' />
+							<input
+								type='text'
+								name='topic'
+								id='contact-form-topic'
+								onChange={handleChangeTopic}
+								value={topic}
+							/>
 						</div>
 					</div>
 					<div className='contact-form-topic-group'>
@@ -33,7 +87,13 @@ const ContactForm = () => {
 							</p>
 						</div>
 						<div className='contact-form-input'>
-							<input type='text' name='contact-form-email' />
+							<input
+								type='email'
+								name='email'
+								id='contact-form-email'
+								onChange={handleChangeEmail}
+								value={email}
+							/>
 						</div>
 					</div>
 					<div className='contact-form-topic-group'>
@@ -41,7 +101,13 @@ const ContactForm = () => {
 							<p>Telefon kontaktowy</p>
 						</div>
 						<div className='contact-form-input'>
-							<input type='text' name='contact-form-phone' />
+							<input
+								type='tel'
+								name='tel'
+								id='contact-form-phone'
+								onChange={handleChangePhone}
+								value={phone}
+							/>
 						</div>
 					</div>
 					<div className='contact-form-topic-group'>
@@ -49,7 +115,12 @@ const ContactForm = () => {
 							<p>Treść wiadomości</p>
 						</div>
 						<div className='contact-form-textarea'>
-							<textarea type='text' name='contact-form-content'></textarea>
+							<textarea
+								name='content'
+								id='contact-form-content'
+								onChange={handleChangeContent}
+								value={content}
+							/>
 						</div>
 					</div>
 					<div className='contact-form-topic-group'>
@@ -57,15 +128,20 @@ const ContactForm = () => {
 							<p>Jak do nas trafiłeś?</p>
 						</div>
 						<div className='contact-form-input'>
-							<select name='contact-form-select'>
-								<option value='' disabled selected>
+							<select
+								name='media'
+								id='contact-form-media'
+								onChange={handleChangeMedia}
+								value={media}
+							>
+								<option hidden disabled value=''>
 									Wybierz
 								</option>
-								<option value='fb'>Facebook</option>
-								<option value='spam'>Spam</option>
-								<option value='google'>Google</option>
-								<option value='friends'>Znajomi</option>
-								<option value='other'>Inni</option>
+								<option>Facebook</option>
+								<option>Spam</option>
+								<option>Google</option>
+								<option>Znajomi</option>
+								<option>Inny</option>
 							</select>
 						</div>
 					</div>

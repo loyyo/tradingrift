@@ -1,33 +1,35 @@
 import React, { Component } from 'react';
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
+import { FaWpforms, FaEnvelope, FaHandshake } from 'react-icons/fa';
+import {GiReceiveMoney} from 'react-icons/gi'
+
 import Title from './Title';
 /* cSpell:disable */
 export default class Process extends Component {
 	state = {
 		services: [
 			{
-				icon: <FaCocktail />,
-				title: 'Free Cocktails',
+				icon: <FaWpforms />,
+				title: 'ZŁOŻENIE OFERTY',
 				info:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi alias provident minus repellendus labore, expedita exercitationem fugit. Qui, maxime? Itaque illum at error facere enim inventore minima placeat explicabo voluptas!',
+					'Aby sprzedać konto należy złożyć ofertę poprzez wypełnienie formularza znajdującego się w zakładce SPRZEDAJ. W formularzu staraj się podać jak najwięcej szczegółów dotyczących konta.',
 			},
 			{
-				icon: <FaHiking />,
-				title: 'Endless Hiking',
+				icon: <FaEnvelope />,
+				title: 'INFORMACJA ZWROTNA',
 				info:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi alias provident minus repellendus labore, expedita exercitationem fugit. Qui, maxime? Itaque illum at error facere enim inventore minima placeat explicabo voluptas!',
+					'W odpowiedzi otrzymasz maila z naszą wyceną. Średni czas oczekiwania wynosi ok. 1-2 dni. Pamiętaj! W formularzu wpisz poprawnie swój adres mailowy, abyśmy mogli odpowiedzieć na ofertę.',
 			},
 			{
-				icon: <FaShuttleVan />,
-				title: 'Free Shuttle',
+				icon: <FaHandshake />,
+				title: 'AKCEPTACJA CENY',
 				info:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi alias provident minus repellendus labore, expedita exercitationem fugit. Qui, maxime? Itaque illum at error facere enim inventore minima placeat explicabo voluptas!',
+					'Jeśli propozycja ceny Cię satysfakcjonuje, naciśnij przycisk "Akceptuję", który przeniesie Cię do instrukcji sprzedaży. Najpierw otrzymasz pieniądze, potem przekażesz nam dostęp do konta. Nasze oferty są ważne 2 dni. Po tym czasie musisz zapytać czy oferta jest nadal aktualna.',
 			},
 			{
-				icon: <FaBeer />,
-				title: 'Strongest Beer',
+				icon: <GiReceiveMoney />,
+				title: 'FORMY PŁATNOŚCI',
 				info:
-					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi alias provident minus repellendus labore, expedita exercitationem fugit. Qui, maxime? Itaque illum at error facere enim inventore minima placeat explicabo voluptas!',
+					'Wykonujemy przelewy do dowolnego banku krajowego, Payu oraz Paypal. Zależy nam, aby osoby przekazujące nam konto czuły się bezpiecznie, dlatego kontakt z nami jest dostępny przez cały czas zawierania transakcji.',
 			},
 		],
 	};

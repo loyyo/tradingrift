@@ -33,7 +33,7 @@ const Testimonials = () => {
 	};
 
 	return (
-		<div className='services'>
+		<div className='testimonials-all'>
 			<div
 				className={css`
 					display: flex;

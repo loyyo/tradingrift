@@ -33,6 +33,7 @@ const ContactForm = () => {
 		setMedia(e.target.value);
 	};
 
+	
 	const handleSubmitForm = (e) => {
 		e.preventDefault();
 		if (email) {
@@ -59,6 +60,8 @@ const ContactForm = () => {
 				first='Skontaktuj się z Nami! Odpowiadamy na wszystkie Pytania.'
 				second='Nasz support mailowy jest czynny przez 6 dni w tygodniu.'
 			/>
+
+			{/* Deleted onSubmit={handleSubmitForm}*/}
 			<form action='/' onSubmit={handleSubmitForm} className='contact-all'>
 				<div className='contact-form'>
 					<div style={{ marginBottom: '30px', marginLeft: '10px' }}>
@@ -167,4 +170,4 @@ const ContactForm = () => {
 	);
 };
 
-export default ContactForm;
+export default ContactForm

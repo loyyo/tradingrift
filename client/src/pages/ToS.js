@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutUsContent from '../components/AboutUsContent';
 // import Herov2 from '../components/Herov2';
 // import Banner from '../components/Banner';
 // import { Link } from 'react-router-dom';
@@ -17,22 +18,19 @@ const ToS = () => {
 					</Link>
 				</Banner>
 			</Herov2> */}
-			<div class='tos'>
+			<div className='tos'>
 				<section id='sp-custom-position-3'>
-					<div class='container'>
-						<div class='row'>
+					<div className='container'>
+						<div className='row'>
 							<div id='sp-custom-position-3' class='col-sm-12 col-md-12'>
-								<div class='sp-column '>
-									<div class='sp-module '>
-										<div class='sp-module-content'>
-											<div class='custom'>
-												<p> </p>
+								<div className='sp-column '>
+									<div className='sp-module '>
+										<div className='sp-module-content'>
+											<div className='custom'>
 												<p>Regulamin serwisu sprzedajkonto.pl</p>
-												<p>
-													<br />
-													I. PODSTAWOWE DEFINICJE
-												</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>I. PODSTAWOWE DEFINICJE</p>
+												</div>
 												<p>
 													Administrator - właściciel i operator Serwisu, tj. Michał Siedlecki
 													prowadzący działalność gospodarczą pod firmą Michał Siedlecki „TRADEX” z
@@ -65,9 +63,9 @@ const ToS = () => {
 													stanowi integralną część każdej umowy sprzedaży Konta przez Użytkownika na
 													rzecz Administratora.
 												</p>
-												<p> </p>
-												<p>II. POSTANOWIENIA OGÓLNE</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>II. POSTANOWIENIA OGÓLNE</p>
+												</div>
 												<p>
 													1. Niniejszy Regulamin określa zasady udostępniania i funkcjonowania
 													Serwisu oraz zasady korzystania z Serwisu, w szczególności prawa i
@@ -133,9 +131,9 @@ const ToS = () => {
 													edytować ani adaptować tych elementów, udzielać licencji na nie, tworzyć
 													na ich podstawie dzieł pochodnych, ani wykorzystywać ich w inny sposób.
 												</p>
-												<p> </p>
-												<p>III. ZASADY KORZYSTANIA Z SERWISU</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>III. ZASADY KORZYSTANIA Z SERWISU</p>
+												</div>
 												<p>
 													1. Użytkownik zobowiązany jest do korzystania z Serwisu w sposób zgodny z
 													postanowieniami Regulaminu, przepisami obowiązującego prawa oraz dobrymi
@@ -163,9 +161,9 @@ const ToS = () => {
 													6. Serwis nie służy do przechowywania jakichkolwiek treści Użytkowników
 													oraz nie służy do upubliczniania jakichkolwiek treści Użytkowników.
 												</p>
-												<p> </p>
-												<p>IV. NABYWANIE KONT</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>IV. NABYWANIE KONT</p>
+												</div>
 												<p>
 													1. W ramach Serwisu Użytkownicy mogą za pośrednictwem stosownych
 													funkcjonalności Serwisu składać Administratorowi oferty sprzedaży Kont.{' '}
@@ -351,9 +349,9 @@ const ToS = () => {
 													następuje w zakresie takim, w jakim uprawnienia przysługiwały
 													Użytkownikowi.
 												</p>
-												<p> </p>
-												<p>V. OŚWIADCZENIA ADMINISTRATORA</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>V. OŚWIADCZENIA ADMINISTRATORA</p>
+												</div>
 												<p>
 													1. Administrator oświadcza, iż dane Użytkowników nie są przekazywane
 													ŻADNEJ firmie zewnętrznej w celach marketingowych. Żadne dane osobowe z
@@ -364,12 +362,9 @@ const ToS = () => {
 													Administrator nie będzie go nigdzie publikował, czy komukolwiek
 													udostępniał.
 												</p>
-												<p> </p>
-												<p>
-													<br />
-													VI. OŚWIADCZENIA UŻYTKOWNIKA
-												</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>VI. OŚWIADCZENIA UŻYTKOWNIKA</p>
+												</div>
 												<p>
 													1. Użytkownik ponosi wyłączną odpowiedzialność za wszystkie udostępnienie,
 													rozpowszechniane i przechowywane przez siebie dane i przyjmuje niniejszym
@@ -415,9 +410,9 @@ const ToS = () => {
 													Administratora ryzyko posądzenia o wykorzystywanie Serwisu do prania
 													brudnych pieniędzy.
 												</p>
-												<p> </p>
-												<p>VII. NIEDOZWOLONE SPOSOBY KORZYSTANIA Z SERWISU</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>VII. NIEDOZWOLONE SPOSOBY KORZYSTANIA Z SERWISU</p>
+												</div>
 												<p>
 													Użytkownik niniejszym oświadcza i zapewnia, iż nie będzie wykonywać
 													następujących czynności:
@@ -461,9 +456,9 @@ const ToS = () => {
 													korzystaniu z niego, w szczególności umieszczać ani rozprowadzać wirusów,
 													ani innego szkodliwego oprogramowania typu adware, spyware, itp.
 												</p>
-												<p> </p>
-												<p>VIII. WYŁĄCZENIE ODPOWIEDZIALNOŚCI</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>VIII. WYŁĄCZENIE ODPOWIEDZIALNOŚCI</p>
+												</div>
 												<p>
 													1. W zakresie dopuszczalnym przez prawo odpowiedzialność Administratora
 													jest wyłączona za:
@@ -516,9 +511,9 @@ const ToS = () => {
 													nie ma zastosowania do konsumentów w zakresie, w jakim naruszałoby to ich
 													prawa.
 												</p>
-												<p> </p>
-												<p>IX. ODPOWIEDZIALNOŚĆ UŻYTKOWNIKA</p>
-												<p> </p>
+												<div className='tos-header'>
+													<p>IX. ODPOWIEDZIALNOŚĆ UŻYTKOWNIKA</p>
+												</div>
 												<p>
 													1. Posługiwanie się przez Użytkowników korzystających z Serwisu
 													zastrzeżonymi znakami towarowymi, nie może naruszać praw ochronnych
@@ -532,12 +527,10 @@ const ToS = () => {
 													rozpowszechnianiem, przechowywaniem Kont, jak też za naruszenie przepisów
 													prawa lub postanowień niniejszego Regulaminu.
 												</p>
+												<div className='tos-header'>
+													<p>X. POSTANOWIENIA KOŃCOWE. PROCEDURA REKLAMACYJNA.</p>
+												</div>
 												<p>
-													<br />
-													X. POSTANOWIENIA KOŃCOWE. PROCEDURA REKLAMACYJNA.
-												</p>
-												<p>
-													<br />
 													1. Wszelka komunikacja z administracją Serwisu powinna się odbywać za
 													pośrednictwem poczty elektronicznej, przy użyciu adresu email:
 													sprzedajkonto@gmail.com

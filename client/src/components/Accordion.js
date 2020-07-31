@@ -14,7 +14,8 @@ const Accordion = (props) => {
 
 	const titleStyle = {
 		fontWeight: 600,
-		fontSize: '14px',
+		fontSize: '24px',
+		color: '#421e87',
 	};
 
 	return (
@@ -24,7 +25,7 @@ const Accordion = (props) => {
 				<span className={active ? 'accordion-icon rotate' : 'accordion-icon'}>{'>'}</span>
 			</button>
 
-			<div ref={contentRef} className='accordion-content'>
+			<div ref={contentRef} className={active ? 'accordion-content' : 'accordion-content-hidden'}>
 				{props.children}
 			</div>
 		</div>

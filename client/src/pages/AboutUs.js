@@ -3,7 +3,6 @@ import Hero from '../components/Herov2';
 import Banner from '../components/Banner';
 import ContentIntroduction from '../components/ContentIntroduction';
 import AboutUsContent from '../components/AboutUsContent';
-import AboutUsAddition from '../components/AboutUsAddition';
 
 /* cSpell:disable */
 const AboutUs = () => {
@@ -12,15 +11,17 @@ const AboutUs = () => {
 			<Hero>
 				<Banner title='Lorem ipsum' subtitle='lorem ipsum' />
 			</Hero>
-			
-			<ContentIntroduction 
-				first='NASZA MISJA' 
-				second='Jesteśmy jedyną legalną Polską firmą kupującą dostęp do kont z używanymi grami komputerowymi. Posiadamy długie 10-letnie doświadczenie. Naszym podstawowym celem jest pomoc graczom w sprzedaży używanej gry, której już nie potrzebują.'	
+			<ContentIntroduction
+				first='NASZA MISJA'
+				second='Jesteśmy jedyną legalną Polską firmą kupującą dostęp do kont z używanymi grami komputerowymi. Posiadamy długie 10-letnie doświadczenie. Naszym podstawowym celem jest pomoc graczom w sprzedaży używanej gry, której już nie potrzebują.'
 			/>
-
 			<AboutUsContent />
-			<AboutUsAddition />
-			
+			<ContentIntroduction
+				className='about-us-addition'
+				first='A co najważniejsze?'
+				second='U nas po ustaleniu ceny, najpierw otrzymasz pieniądze, 
+				a dopiero potem przekażesz nam dostęp do konta.'
+			/>
 		</div>
 	);
 };

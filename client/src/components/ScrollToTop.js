@@ -12,7 +12,7 @@ const ScrollToTop = () => {
 				setActive(false);
 			}
 		});
-	}, [window.pageYOffset]);
+	}, []);
 
 	const scrollToTop = () => {
 		window.scrollTo({

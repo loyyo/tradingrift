@@ -16,28 +16,26 @@ const ContactForm = () => {
 	const handleChangeTopic = (e) => {
 		setTopic(e.target.value);
 	};
-
 	const handleChangeEmail = (e) => {
 		setEmail(e.target.value.trim());
 	};
-
 	const handleChangePhone = (e) => {
 		setPhone(e.target.value.trim());
 	};
-
 	const handleChangeContent = (e) => {
 		setContent(e.target.value);
 	};
-
 	const handleChangeMedia = (e) => {
 		setMedia(e.target.value);
 	};
 
-	
 	const handleSubmitForm = (e) => {
 		e.preventDefault();
 		if (email) {
-			const text = `Telefon: ${phone} Media: ${media} Treść: ${content}`;
+			const text = `
+			Telefon: ${phone}
+			Media: ${media}
+			Treść: ${content}`;
 			const data = {
 				subject: topic,
 				email,
@@ -170,4 +168,4 @@ const ContactForm = () => {
 	);
 };
 
-export default ContactForm
+export default ContactForm;

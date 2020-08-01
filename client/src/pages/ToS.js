@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutUsContent from '../components/AboutUsContent';
+// import AboutUsContent from '../components/AboutUsContent';
 // import Herov2 from '../components/Herov2';
 // import Banner from '../components/Banner';
 // import { Link } from 'react-router-dom';

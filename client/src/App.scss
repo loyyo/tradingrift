@@ -214,7 +214,7 @@ h6 {
 	padding: 2rem 1rem;
 	text-align: center;
 	text-transform: capitalize;
-	letter-spacing: var(--mainSpacing);
+	letter-spacing: 2px;
 }
 .banner h1 {
 	font-size: 2.5rem;
@@ -271,6 +271,13 @@ h6 {
 	background: var(--offWhite);
 	text-align: center;
 	padding: 5rem 0;
+}
+
+.service div {
+	width: 10rem;
+	height: 5px;
+	background: var(--primaryColor);
+	margin: 1.7rem auto;
 }
 
 .services-center {
@@ -353,7 +360,7 @@ h6 {
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	background: url('./images/lilia.jpg') center/cover no-repeat;
+	background: url('./images/lilia.png') center/cover no-repeat;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -397,13 +404,122 @@ h6 {
 	}
 }
 
+@media screen and (max-width: 320px) {
+	.ctaimg-container {
+		width: 200px;
+		height: 200px;
+	}
+}
+
 /* End of CTA */
 
 /* Testimonials */
 
 .testimonials-all {
-	background-color: #cccccc;
-	padding: 40px 0;
+	padding: 70px 0 70px 0;
+	text-align: center;
+	background: var(--offWhite);
+}
+
+.testimonials-all h2 {
+	font-size: 42px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+.testimonials-left-arrow {
+	display: inline-block;
+	width: 70px;
+	padding-right: 20px;
+	font-size: 32px;
+	border-right: 1px solid #909090;
+	vertical-align: top;
+}
+
+.testimonials-left-arrow p {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #421e87;
+	color: #f0f0f0;
+	line-height: 145%;
+	transform: rotate(180deg);
+}
+
+.testimonials-left-arrow p:hover {
+	background-color: #0e071c;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.testimonials-right-arrow {
+	display: inline-block;
+	width: 70px;
+	font-size: 32px;
+	padding-left: 20px;
+	vertical-align: top;
+}
+
+.testimonials-right-arrow p {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #421e87;
+	color: #f0f0f0;
+	line-height: 155%;
+}
+
+.testimonials-right-arrow p:hover {
+	background-color: #0e071c;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.testimonials-client {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #421e87;
+	letter-spacing: 1px;
+}
+
+.testimonials-date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+.testimonials-quote {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.testimonials-quote p {
+	width: 70%;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+
+@media screen and (max-width: 866px) {
+	.testimonials-quote p {
+		width: 90%;
+		font-size: 20px;
+	}
+
+	.testimonials-all h2 {
+		font-size: 38px;
+	}
 }
 
 /* Footer */
@@ -1048,6 +1164,32 @@ h6 {
 }
 
 .sell-input input[type='text']:focus {
+	border: 1px solid #6b6b6b;
+	background-color: #ededed;
+}
+
+.sell-input input[type='email'] {
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #606060;
+}
+
+.sell-input input[type='email']:focus {
+	border: 1px solid #6b6b6b;
+	background-color: #ededed;
+}
+
+.sell-input input[type='tel'] {
+	font-size: 16px;
+	padding: 10px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #606060;
+}
+
+.sell-input input[type='tel']:focus {
 	border: 1px solid #6b6b6b;
 	background-color: #ededed;
 }

@@ -2,90 +2,92 @@ import React, { useState } from 'react';
 import { css } from 'emotion';
 
 const Testimonials = () => {
-	const reviews = {
-		0: {
-			client: 'Client nr1',
+	const reviews = [
+		{
+			client: 'JożinKurwaZbażin',
+			date: 'Jul 25, 2019',
 			quote:
-				'Etiam rhoncus, enim sed volutpat tristique, sapien felis imperdiet arcu, non sagittis lectus magna vel ligula',
+				'Panowie zrobili mi w LoLu tak dobrze, że jeszcze nikt mi w życiu tak dobrze nie zrobił.',
 		},
-		1: {
-			client: 'Client nr2',
-			quote:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum fermentum magna, quis viverra massa semper eget.',
+		{
+			client: 'MaciekZKlanu',
+			date: 'Feb 1, 2069',
+			quote: 'Legue of legents, hyhyhy',
 		},
-		2: {
-			client: 'Client nr3',
-			quote:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus, enim sed volutpat tristique, sapien felis imperdiet arcu, non sagittis lectus magna vel ligula',
+		{
+			client: 'KońskiZad',
+			date: 'Mar 3 2015',
+			quote: 'Dobre to mocie po wsi lotać.',
 		},
-		3: {
-			client: 'Client nr4',
-			quote:
-				'Donec bibendum fermentum magna, quis viverra massa semper eget. Etiam rhoncus, enim sed volutpat tristique, sapien felis imperdiet arcu, non sagittis lectus magna vel ligula',
+		{
+			client: 'StaryCap',
+			date: 'Jan 6, 2020',
+			quote: 'Dejcie mnie to za darmo.',
 		},
-	};
-	const [current, setCurrent] = useState(reviews[0]);
+		{
+			client: 'DychaNaGodzinę',
+			date: 'Jan 12 2020',
+			quote: 'Za normalną robotę byście się wzieli!',
+		},
+	];
+
 	const [active, setActive] = useState(0);
 
-	const handleSetClick = (event) => {
-		setCurrent(reviews[event.target.getAttribute('data-quote')]);
-		setActive(event.target.getAttribute('data-quote'));
+	const autoChangeTestimonials = setTimeout(() => {
+		if (active >= 4) {
+			setActive(0);
+		} else {
+			setActive(active + 1);
+		}
+	}, 5000);
+
+	let changeTestimonialsRight = () => {
+		if (active >= 4) {
+			setActive(0);
+		} else {
+			setActive(active + 1);
+		}
+		clearTimeout(autoChangeTestimonials);
+	};
+
+	let changeTestimonialsLeft = () => {
+		if (active <= 0) {
+			setActive(4);
+		} else {
+			setActive(active - 1);
+		}
+		clearTimeout(autoChangeTestimonials);
 	};
 
 	return (
 		<div className='testimonials-all'>
-			<div
-				className={css`
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					margin: 40px auto;
-					max-width: 700px;
-
-					p {
-						text-align: center;
-						margin-bottom: 20px;
-					}
-				`}
-			>
-				<p>{current.quote}</p>
-				<p>{current.client}</p>
-				<div
-					className={css`
-						display: flex;
-						span {
-							height: 20px;
-							width: 20px;
-							margin: 0 3px;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							cursor: pointer;
-						}
-
-						span::before {
-							content: '';
-							height: 6px;
-							width: 6px;
-							background-color: #af9a7d;
-							border-radius: 50%;
-							transition: background-color 0.3 ease;
-						}
-						span:hover::before {
-							background-color: #454545;
-						}
-						span[data-quote="${active}"]::before {
-							background-color: #454545;
-						}
-					`}
-				>
-					{Object.keys(reviews).map((index) => (
-						<span onClick={(event) => handleSetClick(event)} data-quote={index} key={index} />
-					))}
-				</div>
+			<h2>Testimonials</h2>
+			<div className='testimonials-left-arrow'>
+				<p id='leftArrow' onClick={changeTestimonialsLeft}>
+					&#10139;
+				</p>
+			</div>
+			<div className='testimonials-right-arrow'>
+				<p id='rightArrow' onClick={changeTestimonialsRight}>
+					&#10139;
+				</p>
+			</div>
+			<div style={{ clear: 'both' }}></div>
+			<div className='testimonials-client'>
+				<p>{reviews[active].client}</p>
+			</div>
+			<div className='testimonials-date'>
+				<p>{reviews[active].date}</p>
+			</div>
+			<div className='testimonials-quote'>
+				<p>{reviews[active].quote}</p>
 			</div>
 		</div>
 	);
 };
 
 export default Testimonials;
+
+/*Object.keys(reviews).map((index) => (
+	<span onClick={(event) => handleSetClick(event)} data-quote={index} key={index} />
+))*/

@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<>
 			<Herov2>
-				<Banner title='Lorem ipsum' subtitle='lorem ipsum'>
+				<Banner title='Znudziła Cię Gierka?' subtitle='TU SPRZEDASZ KONTO!'>
 					<Link to='/faq' className='btn-primary'>
 						Dowiedz się więcej
 					</Link>

@@ -9,7 +9,7 @@ const AboutUs = () => {
 	return (
 		<div>
 			<Hero>
-				<Banner title='Lorem ipsum' subtitle='lorem ipsum' />
+				<Banner title='Kim Jesteśmy?' subtitle='Poznaj nas! :-)' />
 			</Hero>
 			<ContentIntroduction
 				first='NASZA MISJA'

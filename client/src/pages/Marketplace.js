@@ -8,7 +8,10 @@ const Marketplace = () => {
 	return (
 		<div>
 			<Hero>
-				<Banner title='Lorem ipsum' subtitle='lorem ipsum' />
+				<Banner
+					title='Chciałbyś sprzedać konto?'
+					subtitle='Wypełnij poniższy formularz, a my jak najszybciej skontaktujemy się z Tobą'
+				/>
 			</Hero>
 			<ContentInfroduction
 				first='Wypełnij i wyślij poniższy Formularz.'

@@ -27,6 +27,7 @@ const SellForm = () => {
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
 	const [media, setMedia] = useState('');
+	const [recaptcha, setRecaptcha] = useState(false);
 
 	const handleChangeChamps = (e) => {
 		setChamps(e.target.value.trim());
@@ -137,7 +138,7 @@ const SellForm = () => {
 	const handleSubmitForm = (e) => {
 		e.preventDefault();
 
-		if (email) {
+		if (recaptcha && email) {
 			const text = `
 			Championy: ${champs}
 			Skiny: ${skins}
@@ -175,52 +176,104 @@ const SellForm = () => {
 
 			axios
 				.post('/submitform', data)
-				.then((response) => console.log(response.data))
-				.catch((error) => console.log(error));
+				.then((response) => {
+					console.log(response.data);
+					alert('Wszystko przebiegło pomyślnie! Postaramy się jak najszybciej odpowiedzieć :-)');
+					setTimeout(() => {
+						Location.reload();
+					}, 5000);
+				})
+				.catch((error) => {
+					console.log(error);
+					alert('Coś poszło nie tak :-(');
+				});
+		} else if (recaptcha && !email) {
+			alert('Musisz jeszcze podać emaila żebyśmy mogli się z Tobą skontaktować! :-)');
+		} else if (!recaptcha && email) {
+			alert('Zaznacz reCaptcha. Musimy się upewnić, że nie jesteś robotem! :-)');
+		} else if (!recaptcha && !email) {
+			alert('Proszę uzupełnić email oraz reCaptcha!');
+		} else {
+			alert('Coś poszło nie tak :-(');
 		}
 	};
 
-	const reCaptcha = (value) => {
-		console.log('Captcha value:', value);
+	const reCaptcha = () => {
+		setRecaptcha(!recaptcha);
 	};
 
 	return (
 		<div className='sell-account-form'>
-			<form action='/' onSubmit={handleSubmitForm}>
+			<form id='sellformsubmit' action='/' onSubmit={handleSubmitForm}>
 				<div className='sell-account-left-side'>
 					<div className='sell-title'>
 						<p>Ilość Championów</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='champs' onChange={handleChangeChamps} value={champs} />
+						<input
+							type='text'
+							pattern='[0-9]{0,3}'
+							title='Można użyć maksymalnie 3 znaków 0-9.'
+							name='champs'
+							onChange={handleChangeChamps}
+							value={champs}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Ilość Skinów</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='skins' onChange={handleChangeSkins} value={skins} />
+						<input
+							type='text'
+							pattern='[0-9]{0,4}'
+							title='Można użyć maksymalnie 4 znaków 0-9.'
+							name='skins'
+							onChange={handleChangeSkins}
+							value={skins}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Ilość Blue Essence</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='be' onChange={handleChangeBe} value={be} />
+						<input
+							type='text'
+							pattern='[0-9]{0,10}'
+							title='Można użyć maksymalnie 10 znaków 0-9.'
+							name='be'
+							onChange={handleChangeBe}
+							value={be}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Level konta</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='level' onChange={handleChangeLevel} value={level} />
+						<input
+							type='text'
+							name='level'
+							pattern='[0-9]{0,4}'
+							title='Można użyć maksymalnie 4 znaków 0-9.'
+							onChange={handleChangeLevel}
+							value={level}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Punkty Riot Points</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='rp' onChange={handleChangeRp} value={rp} />
+						<input
+							type='text'
+							name='rp'
+							pattern='[0-9]{0,6}'
+							title='Można użyć maksymalnie 6 znaków 0-9.'
+							onChange={handleChangeRp}
+							value={rp}
+						/>
 					</div>
 
 					<div className='sell-title'>
@@ -245,21 +298,42 @@ const SellForm = () => {
 						<p>Ilość ikon summonera</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='icons' onChange={handleChangeIcons} value={icons} />
+						<input
+							type='text'
+							pattern='[0-9]{0,4}'
+							title='Można użyć maksymalnie 4 znaków 0-9.'
+							name='icons'
+							onChange={handleChangeIcons}
+							value={icons}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Dywizja Sezon 9</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='s9' onChange={handleChangeS9} value={s9} />
+						<input
+							type='text'
+							pattern='[A-Za-z 0-9]{0,20}'
+							title='Można użyć maksymalnie 20 znaków A-Z, a-z, 0-9.'
+							name='s9'
+							onChange={handleChangeS9}
+							value={s9}
+						/>
 					</div>
 
 					<div className='sell-title'>
 						<p>Dywizja Sezon 10</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='s10' onChange={handleChangeS10} value={s10} />
+						<input
+							type='text'
+							pattern='[A-Za-z 0-9]{0,20}'
+							title='Można użyć maksymalnie 20 znaków A-Z, a-z, 0-9.'
+							name='s10'
+							onChange={handleChangeS10}
+							value={s10}
+						/>
 					</div>
 
 					<div className='sell-title'>
@@ -268,7 +342,14 @@ const SellForm = () => {
 						</p>
 					</div>
 					<div className='sell-input'>
-						<input type='text' name='opgg' onChange={handleChangeOpgg} value={opgg} />
+						<input
+							type='text'
+							pattern='[A-Za-z0-9:/]{0,20}.op.gg/[A-Za-z0-9 + = - _ ^ / : * %]{0,70}'
+							title='Można użyć nastpępujących znaków: A-Z,a-z,0-9,:,/,+,=,*,^,-, według szablonu https://www.op.gg/twoja_ścieżka'
+							name='opgg'
+							onChange={handleChangeOpgg}
+							value={opgg}
+						/>
 					</div>
 
 					<div className='sell-title'>
@@ -398,7 +479,14 @@ const SellForm = () => {
 						<p>Telefon Kontaktowy</p>
 					</div>
 					<div className='sell-input'>
-						<input type='tel' name='tel' onChange={handleChangePhone} value={phone} />
+						<input
+							type='tel'
+							pattern='[0-9]{9}'
+							title='Można użyć maksymalnie 9 znaków 0-9.'
+							name='tel'
+							onChange={handleChangePhone}
+							value={phone}
+						/>
 					</div>
 
 					<div className='sell-title'>

@@ -23,7 +23,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<Newsletter />
-				<div className='copyright'>Jedna baba drugiej babie &copy; wsadziła do dupy grabie.</div>
+				<div className='copyright'>MADE BY &copy; MACIEJ WIENCIS & BARTOSZ SURMA</div>
 			</div>
 		</footer>
 	);

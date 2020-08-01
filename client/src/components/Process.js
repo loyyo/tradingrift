@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { FaWpforms, FaEnvelope, FaHandshake } from 'react-icons/fa';
-import {GiReceiveMoney} from 'react-icons/gi'
-
-import Title from './Title';
+import { GiReceiveMoney } from 'react-icons/gi';
 /* cSpell:disable */
 export default class Process extends Component {
 	state = {
@@ -36,12 +34,12 @@ export default class Process extends Component {
 	render() {
 		return (
 			<section className='services'>
-				<Title title='services' />
 				<div className='services-center'>
 					{this.state.services.map((item, index) => {
 						return (
 							<article key={index} className='service'>
 								<span>{item.icon}</span>
+								<div></div>
 								<h6>{item.title}</h6>
 								<p>{item.info}</p>
 							</article>

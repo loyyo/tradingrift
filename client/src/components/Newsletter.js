@@ -11,8 +11,17 @@ const Newsletter = () => {
 		if (email) {
 			fetch(`/api/memberAdd?email=${email}`)
 				.then((res) => res.json())
-				.then((res) => console.log(res))
-				.catch((err) => console.log(err));
+				.then((res) => {
+					console.log(res);
+					alert('Wszystko przebiegło pomyślnie!');
+					setTimeout(() => {
+						Location.reload();
+					}, 5000);
+				})
+				.catch((err) => {
+					console.log(err);
+					alert('Coś poszło nie tak :-(');
+				});
 		}
 		window.location.reload();
 	};

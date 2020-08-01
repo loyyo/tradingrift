@@ -12,6 +12,7 @@ const ContactForm = () => {
 	const [phone, setPhone] = useState('');
 	const [content, setContent] = useState('');
 	const [media, setMedia] = useState('');
+	const [recaptcha, setRecaptcha] = useState(false);
 
 	const handleChangeTopic = (e) => {
 		setTopic(e.target.value);
@@ -31,7 +32,7 @@ const ContactForm = () => {
 
 	const handleSubmitForm = (e) => {
 		e.preventDefault();
-		if (email) {
+		if (recaptcha && email) {
 			const text = `
 			Telefon: ${phone}
 			Media: ${media}
@@ -43,13 +44,32 @@ const ContactForm = () => {
 			};
 			axios
 				.post('/submitform', data)
-				.then((response) => console.log(response.data))
-				.catch((error) => console.log(error));
+				.then((response) => {
+					console.log(response.data);
+					alert(
+						'Wiadomość została przesłana! Postaramy się jak najszybciej na nią odpowiedzieć :-)'
+					);
+					setTimeout(() => {
+						Location.reload();
+					}, 5000);
+				})
+				.catch((error) => {
+					console.log(error);
+					alert('Coś poszło nie tak :-(');
+				});
+		} else if (recaptcha && !email) {
+			alert('Musisz jeszcze podać emaila żebyśmy mogli się z Tobą skontaktować! :-)');
+		} else if (!recaptcha && email) {
+			alert('Zaznacz reCaptcha. Musimy się upewnić, że nie jesteś robotem! :-)');
+		} else if (!recaptcha && !email) {
+			alert('Proszę uzupełnić email oraz reCaptcha!');
+		} else {
+			alert('Coś poszło nie tak :-(');
 		}
 	};
 
-	const reCaptcha = (value) => {
-		console.log('Captcha value:', value);
+	const reCaptcha = () => {
+		setRecaptcha(!recaptcha);
 	};
 
 	return (
@@ -75,6 +95,8 @@ const ContactForm = () => {
 							<input
 								type='text'
 								name='topic'
+								pattern='.{0,50}'
+								title='Można użyć maksymalnie 50 znaków.'
 								id='contact-form-topic'
 								onChange={handleChangeTopic}
 								value={topic}
@@ -105,6 +127,8 @@ const ContactForm = () => {
 							<input
 								type='tel'
 								name='tel'
+								pattern='[0-9]{9}'
+								title='Telefon powinien zawierać 9 znaków 0-9.'
 								id='contact-form-phone'
 								onChange={handleChangePhone}
 								value={phone}

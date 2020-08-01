@@ -20,6 +20,7 @@
 		"react-dom": "^16.13.1",
 		"react-google-recaptcha": "^2.1.0",
 		"react-icons": "^3.10.0",
+		"react-image-gallery": "^1.0.8",
 		"react-mailchimp-subscribe": "^2.1.0",
 		"react-messenger-customer-chat": "^0.8.0",
 		"react-router": "^5.2.0",

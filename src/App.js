@@ -12,7 +12,7 @@ import FAQ from './pages/FAQ';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-// import Messenger from './components/Messenger';
+import Messenger from './components/Messenger';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
 			</Switch>
 			<Footer />
 			<ScrollToTop />
-			{/* <Messenger /> */}
+			<Messenger />
 		</div>
 	);
 };

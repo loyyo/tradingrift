@@ -171,7 +171,11 @@ const ContactForm = () => {
 						</div>
 					</div>
 					<div className='recaptcha'>
-						<ReCAPTCHA sitekey='6LcOzrQZAAAAACliB4sqyEXLzhrcQCycOYpGaJpe' onChange={reCaptcha} />
+						<ReCAPTCHA
+							sitekey='6Ld6RbwZAAAAAHZmsFVvcsBdR4wlA_uwDgMd8ti2
+'
+							onChange={reCaptcha}
+						/>
 					</div>
 					<input id='content-form-submit' type='submit' value='Wyślij' />
 				</div>

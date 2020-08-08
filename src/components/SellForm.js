@@ -63,7 +63,7 @@ const SellForm = () => {
 	};
 	const handleChangeScreen = async (e) => {
 		const screen = e.target.files[0];
-		const auth = process.env.IMGUR_CLIENT_ID;
+		const auth = '2de22bcb6f42209';
 		const formData = new FormData();
 		formData.append('type', 'file');
 		formData.append('image', screen);
@@ -85,7 +85,7 @@ const SellForm = () => {
 	};
 	const handleChangeScreen2 = async (e) => {
 		const screen = e.target.files[0];
-		const auth = process.env.IMGUR_CLIENT_ID;
+		const auth = '2de22bcb6f42209';
 		const formData = new FormData();
 		formData.append('type', 'file');
 		formData.append('image', screen);
@@ -508,7 +508,11 @@ const SellForm = () => {
 				</div>
 				<div className='sell-account-submit'>
 					<div className='recaptcha'>
-						<ReCAPTCHA sitekey='6LcOzrQZAAAAACliB4sqyEXLzhrcQCycOYpGaJpe' onChange={reCaptcha} />
+						<ReCAPTCHA
+							sitekey='6Ld6RbwZAAAAAHZmsFVvcsBdR4wlA_uwDgMd8ti2
+'
+							onChange={reCaptcha}
+						/>
 					</div>
 					<input type='submit' value='Wyślij ofertę' />
 				</div>

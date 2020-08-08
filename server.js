@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const sendMail = require('./mail');
+const cors = require('cors');
 const Mailchimp = require('mailchimp-api-v3');
 require('dotenv').config({ path: __dirname + '/variables.env' });
 
@@ -9,6 +10,8 @@ const list_id = process.env.LIST_ID;
 
 const app = express();
 const mailchimp = new Mailchimp(mc_api_key);
+
+app.use(cors());
 
 // Data Parsing
 app.use(

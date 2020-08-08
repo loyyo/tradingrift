@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
-import config from '../config';
 
 const SellForm = () => {
 	const [champs, setChamps] = useState('');
@@ -64,7 +63,7 @@ const SellForm = () => {
 	};
 	const handleChangeScreen = async (e) => {
 		const screen = e.target.files[0];
-		const auth = config.IMGUR_CLIENT_ID;
+		const auth = process.env.IMGUR_CLIENT_ID;
 		const formData = new FormData();
 		formData.append('type', 'file');
 		formData.append('image', screen);
@@ -86,7 +85,7 @@ const SellForm = () => {
 	};
 	const handleChangeScreen2 = async (e) => {
 		const screen = e.target.files[0];
-		const auth = config.IMGUR_CLIENT_ID;
+		const auth = process.env.IMGUR_CLIENT_ID;
 		const formData = new FormData();
 		formData.append('type', 'file');
 		formData.append('image', screen);
@@ -177,7 +176,7 @@ const SellForm = () => {
 			};
 
 			axios
-				.post('/submitform', data)
+				.post('https://tradingrift.herokuapp.com/submitform', data)
 				.then((response) => {
 					console.log(response.data);
 					alert('Wszystko przebiegło pomyślnie! Postaramy się jak najszybciej odpowiedzieć :-)');

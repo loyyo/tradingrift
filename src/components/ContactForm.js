@@ -43,7 +43,7 @@ const ContactForm = () => {
 				text,
 			};
 			axios
-				.post('/submitform', data)
+				.post('https://tradingrift.herokuapp.com/submitform', data)
 				.then((response) => {
 					console.log(response.data);
 					alert(

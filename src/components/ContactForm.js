@@ -49,9 +49,6 @@ const ContactForm = () => {
 					alert(
 						'Wiadomość została przesłana! Postaramy się jak najszybciej na nią odpowiedzieć :-)'
 					);
-					setTimeout(() => {
-						window.location.reload(true);
-					}, 5000);
 				})
 				.catch((error) => {
 					console.log(error);

@@ -180,9 +180,6 @@ const SellForm = () => {
 				.then((response) => {
 					console.log(response.data);
 					alert('Wszystko przebiegło pomyślnie! Postaramy się jak najszybciej odpowiedzieć :-)');
-					setTimeout(() => {
-						window.location.reload(true);
-					}, 5000);
 				})
 				.catch((error) => {
 					console.log(error);

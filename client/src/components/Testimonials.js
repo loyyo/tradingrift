@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
-import { css } from 'emotion';
 
 const Testimonials = () => {
 	const reviews = [
 		{
-			client: 'JożinKurwaZbażin',
+			client: 'Client nr1',
 			date: 'Jul 25, 2019',
 			quote:
-				'Panowie zrobili mi w LoLu tak dobrze, że jeszcze nikt mi w życiu tak dobrze nie zrobił.',
+				'Ut condimentum facilisis ipsum id bibendum. Quisque eget vestibulum nisi, malesuada aliquet lorem. Pellentesque sed venenatis ligula, eu facilisis magna.',
 		},
 		{
-			client: 'MaciekZKlanu',
+			client: 'Client nr2',
 			date: 'Feb 1, 2069',
-			quote: 'Legue of legents, hyhyhy',
+			quote:
+				'Proin mollis scelerisque dolor ut sagittis. Donec laoreet faucibus elit in tempus. Proin sollicitudin semper tellus, sit amet vehicula metus venenatis ac.',
 		},
 		{
-			client: 'KońskiZad',
+			client: 'Client nr3',
 			date: 'Mar 3 2015',
-			quote: 'Dobre to mocie po wsi lotać.',
+			quote:
+				'In eleifend ex ac ultricies bibendum. Duis in leo porttitor, laoreet sapien quis, imperdiet libero. Donec vitae tristique nisl.',
 		},
 		{
-			client: 'StaryCap',
+			client: 'Client nr4',
 			date: 'Jan 6, 2020',
-			quote: 'Dejcie mnie to za darmo.',
+			quote:
+				'Suspendisse mattis, nibh ut pellentesque feugiat, augue augue bibendum augue, quis rutrum tortor velit vel elit.',
 		},
 		{
-			client: 'DychaNaGodzinę',
+			client: 'Client nr5',
 			date: 'Jan 12 2020',
-			quote: 'Za normalną robotę byście się wzieli!',
+			quote:
+				'Maecenas tristique, velit nec ultricies consectetur, justo libero rutrum dui, vel convallis massa purus id nisi. Aliquam at egestas nisi.',
 		},
 	];
 

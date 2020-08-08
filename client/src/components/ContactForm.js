@@ -50,7 +50,7 @@ const ContactForm = () => {
 						'Wiadomość została przesłana! Postaramy się jak najszybciej na nią odpowiedzieć :-)'
 					);
 					setTimeout(() => {
-						Location.reload();
+						window.location.reload(true);
 					}, 5000);
 				})
 				.catch((error) => {
@@ -178,13 +178,13 @@ const ContactForm = () => {
 				<div className='contact-data'>
 					<h3>Dane kontaktowe</h3>
 					<p>
-						<FaPhoneAlt className='contact-icons' /> <span>666 696 969</span>
+						<FaPhoneAlt className='contact-icons' /> <span>579 050 442</span>
 					</p>
 					<p>
-						<BsEnvelopeFill className='contact-icons' /> <span>jebac@pis.com</span>
+						<BsEnvelopeFill className='contact-icons' /> <span>maciejwiencis262@gmail.com</span>
 					</p>
 					<p>
-						<FaSkype className='contact-icons' /> <span>SprzedajKonto</span>
+						<FaSkype className='contact-icons' /> <span>TradingRift</span>
 					</p>
 				</div>
 			</form>

@@ -79,8 +79,9 @@ const SellForm = () => {
 		const data = await response.json();
 		if (data.success) {
 			setLink2(data.data.link);
+			console.log(`IMGUR API Działa ${link2}`);
 		} else {
-			console.log('Chuj by to strzelił');
+			console.log('Coś poszło nie tak');
 		}
 	};
 	const handleChangeScreen2 = async (e) => {
@@ -100,8 +101,9 @@ const SellForm = () => {
 		const data = await response.json();
 		if (data.success) {
 			setLink(data.data.link);
+			console.log(`IMGUR API Działa ${link}`);
 		} else {
-			console.log('Chuj by to strzelił');
+			console.log('Coś poszło nie tak');
 		}
 	};
 	const handleChangePrice = (e) => {
@@ -180,7 +182,7 @@ const SellForm = () => {
 					console.log(response.data);
 					alert('Wszystko przebiegło pomyślnie! Postaramy się jak najszybciej odpowiedzieć :-)');
 					setTimeout(() => {
-						Location.reload();
+						window.location.reload(true);
 					}, 5000);
 				})
 				.catch((error) => {
@@ -338,7 +340,7 @@ const SellForm = () => {
 
 					<div className='sell-title'>
 						<p>
-							Op.gg Link: (<a href='http://www.op.gg/'>http://www.op.gg/</a>)
+							Op.gg Link: (<a href='http://www.op.gg/'>https://www.op.gg/</a>)
 						</p>
 					</div>
 					<div className='sell-input'>

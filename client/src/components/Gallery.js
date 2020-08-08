@@ -1,31 +1,33 @@
-import React from 'react';
-import ImageGallery from 'react-image-gallery';
+// To jest chyba useless xd
 
-const Gallery = () => {
-	const images = [
-		{
-			original: '',
-			thumbnail: '',
-		},
-		{
-			original: '',
-			thumbnail: '',
-		},
-		{
-			original: '',
-			thumbnail: '',
-		},
-	];
-	return (
-		<div className='gallery'>
-			<h3>TradingRift Gallery</h3>
-			<p>Ostatnie sprzedane konta naszych klientów:</p>
-			<ImageGallery items={images} />;
-		</div>
-	);
-};
+// import React from 'react';
+// import ImageGallery from 'react-image-gallery';
 
-export default Gallery;
+// const Gallery = () => {
+// 	const images = [
+// 		{
+// 			original: '',
+// 			thumbnail: '',
+// 		},
+// 		{
+// 			original: '',
+// 			thumbnail: '',
+// 		},
+// 		{
+// 			original: '',
+// 			thumbnail: '',
+// 		},
+// 	];
+// 	return (
+// 		<div className='gallery'>
+// 			<h3>TradingRift Gallery</h3>
+// 			<p>Ostatnie sprzedane konta naszych klientów:</p>
+// 			<ImageGallery items={images} />;
+// 		</div>
+// 	);
+// };
+
+// export default Gallery;
 
 // ImageGallery avaible props:
 // original - image src url

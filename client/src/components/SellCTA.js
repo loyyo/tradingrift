@@ -10,7 +10,9 @@ const SellCTA = () => {
 					<p>U nas sprzedasz je szybciej i łatwiej! Współpraca z nami to pewność uczciwej ceny!</p>
 				</div>
 			</div>
-			<div className='ctaimg-container' />
+			<a href='/sprzedaj'>
+				<div className='ctaimg-container' />
+			</a>
 		</div>
 	);
 };

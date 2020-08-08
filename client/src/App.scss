@@ -4,14 +4,14 @@
 	box-sizing: border-box;
 }
 :root {
-	--primaryColor: #af9a7d;
+	--primaryColor: #355b9b;
 	--mainWhite: #fff;
 	--offWhite: #f7f7f7;
 	--mainBlack: #222;
 	--mainGrey: #ececec;
 	--darkGrey: #cfcfcf;
 	--mainTransition: all 0.3s linear;
-	--mainSpacing: 3px;
+	--mainSpacing: 2px;
 	--lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 	--darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -103,6 +103,7 @@ h6 {
 .nav-header {
 	display: flex;
 	justify-content: space-between;
+	background: transparent;
 }
 .nav-btn {
 	background: transparent;
@@ -117,6 +118,7 @@ h6 {
 .nav-links {
 	height: 0;
 	overflow: hidden;
+	padding: 0.25rem 0;
 	transition: var(--mainTransition);
 	list-style-type: none;
 }
@@ -136,7 +138,7 @@ h6 {
 }
 
 .show-nav {
-	height: 100px;
+	height: 275px;
 }
 @media screen and (min-width: 768px) {
 	.nav-btn {
@@ -441,14 +443,14 @@ h6 {
 	height: 50px;
 	border-radius: 50%;
 	text-align: center;
-	background-color: #421e87;
+	background-color: #355b9b;
 	color: #f0f0f0;
 	line-height: 145%;
 	transform: rotate(180deg);
 }
 
 .testimonials-left-arrow p:hover {
-	background-color: #0e071c;
+	background-color: #0c1323;
 	cursor: pointer;
 	color: #ffffff;
 }
@@ -466,13 +468,13 @@ h6 {
 	height: 50px;
 	border-radius: 50%;
 	text-align: center;
-	background-color: #421e87;
+	background-color: #355b9b;
 	color: #f0f0f0;
 	line-height: 155%;
 }
 
 .testimonials-right-arrow p:hover {
-	background-color: #0e071c;
+	background-color: #0c1323;
 	cursor: pointer;
 	color: #ffffff;
 }
@@ -484,7 +486,7 @@ h6 {
 	padding-top: 30px;
 	font-size: 20px;
 	font-weight: 600;
-	color: #421e87;
+	color: #355b9b;
 	letter-spacing: 1px;
 }
 
@@ -526,7 +528,7 @@ h6 {
 
 .footer {
 	width: 100%;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	padding-top: 20px;
 	clear: both;
 }
@@ -555,7 +557,7 @@ h6 {
 
 .socials-footer {
 	padding: 20px;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -568,9 +570,9 @@ h6 {
 	height: 40px;
 	border-radius: 50%;
 	object-fit: cover;
-	background-color: #421e87;
+	background-color: #355b9b;
 	margin: 0 15px;
-	color: #0e071c;
+	color: #0c1323;
 	font-size: 25px;
 }
 
@@ -586,9 +588,9 @@ h6 {
 	height: 40px;
 	border-radius: 50%;
 	object-fit: cover;
-	background-color: #421e87;
+	background-color: #355b9b;
 	margin: 0 15px;
-	color: #0e071c;
+	color: #0c1323;
 	font-size: 25px;
 }
 
@@ -604,9 +606,9 @@ h6 {
 	height: 40px;
 	border-radius: 50%;
 	object-fit: cover;
-	background-color: #421e87;
+	background-color: #355b9b;
 	margin: 0 15px;
-	color: #0e071c;
+	color: #0c1323;
 	font-size: 25px;
 }
 
@@ -621,7 +623,7 @@ h6 {
 
 .newsletter {
 	padding: 20px;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -635,7 +637,7 @@ h6 {
 
 .newsletter-header {
 	padding: 15px;
-	color: #421e87;
+	color: #355b9b;
 	font-size: 12px;
 	font-weight: 700;
 	text-align: center;
@@ -654,7 +656,7 @@ h6 {
 	font-weight: 700;
 	border: none;
 	outline: none;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	color: #ffffff;
 }
 
@@ -665,7 +667,7 @@ h6 {
 }
 
 .newsletter-send button {
-	background-color: #0e071c;
+	background-color: #0c1323;
 	border: none;
 	box-sizing: border-box;
 	color: #d0d0d0;
@@ -677,7 +679,7 @@ h6 {
 
 .newsletter-send button:hover {
 	cursor: pointer;
-	background-color: #421e87;
+	background-color: #355b9b;
 	animation-name: buttonNewsletter;
 	animation-fill-mode: both;
 	animation-duration: 0.3s;
@@ -716,10 +718,10 @@ h6 {
 
 @keyframes buttonNewsletter {
 	0% {
-		background-color: #0e071c;
+		background-color: #0c1323;
 	}
 	100% {
-		background-color: #421e87;
+		background-color: #355b9b;
 	}
 }
 
@@ -733,7 +735,7 @@ h6 {
 	align-items: center;
 	justify-content: center;
 	padding: 10px 0px;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	color: #d0d0d0;
 	font-size: 18px;
 }
@@ -795,14 +797,14 @@ h6 {
 	border-radius: 5px;
 	outline: none;
 	border: none;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	color: white;
 	font-weight: 700;
 	font-size: 16px;
 }
 
 #content-form-submit:hover {
-	background-color: #421e87;
+	background-color: #355b9b;
 	cursor: pointer;
 }
 
@@ -1100,7 +1102,7 @@ h6 {
 /* Marketplace */
 
 .content-introduction-field {
-	background-color: #0e071c;
+	background-color: #0c1323;
 	color: #ffffff;
 	width: 100%;
 	display: flex;
@@ -1251,7 +1253,7 @@ h6 {
 	font-size: 16px;
 	outline: none;
 	color: #d0d0d0;
-	background-color: #0e071c;
+	background-color: #0c1323;
 	border-radius: 50%;
 	border: none;
 	margin-bottom: 30px;
@@ -1262,7 +1264,7 @@ h6 {
 
 .sell-account-submit input[type='submit']:hover {
 	cursor: pointer;
-	background-color: #421e87;
+	background-color: #355b9b;
 	color: #ffffff;
 }
 
@@ -1365,7 +1367,7 @@ h6 {
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	background-color: #421e87;
+	background-color: #355b9b;
 	padding: 70px 0px;
 	color: #d0d0d0;
 }

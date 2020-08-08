@@ -15,7 +15,7 @@ const Accordion = (props) => {
 	const titleStyle = {
 		fontWeight: 600,
 		fontSize: '24px',
-		color: '#421e87',
+		color: '#0c1323',
 	};
 
 	return (

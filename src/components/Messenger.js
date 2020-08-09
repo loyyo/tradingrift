@@ -6,11 +6,12 @@ const Messenger = () => {
 		<>
 			<MessengerCustomerChat
 				pageId='983211351870651'
-				appId=''
-				version='v8.0'
+				appId='777868586355506'
+				htmlRef={window.location.pathname}
+				// version='v8.0'
 				themeColor='#355b9b'
-				loggedInGreeting='Cześć! Czy możemy w czymś Tobie pomóc?'
-				loggedOutGreeting='Cześć! Czy możemy w czymś Tobie pomóc?'
+				loggedInGreeting='Cześć! Czy możemy Tobie w czymś pomóc?'
+				loggedOutGreeting='Cześć! Czy możemy Tobie w czymś pomóc?'
 			/>
 		</>
 	);

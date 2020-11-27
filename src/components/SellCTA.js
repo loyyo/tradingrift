@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //
 const SellCTA = () => {
@@ -10,9 +11,9 @@ const SellCTA = () => {
 					<p>U nas sprzedasz je szybciej i łatwiej! Współpraca z nami to pewność uczciwej ceny!</p>
 				</div>
 			</div>
-			<a href='/sprzedaj'>
+			<Link to='/sprzedaj'>
 				<div className='ctaimg-container' />
-			</a>
+			</Link>
 		</div>
 	);
 };
